@@ -17,7 +17,6 @@ lsp.ensure_installed({
   'tsserver',
   'rust_analyzer',
   'clangd',
-  'prismals',
   'tailwindcss',
 })
 
