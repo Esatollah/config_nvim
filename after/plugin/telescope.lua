@@ -5,4 +5,4 @@ vim.keymap.set('n', '<leader>ps', function()
   builtin.grep_string({ search = vim.fn.input("Grep > ") });
 end)
 
-vim.keymap.set('n', "<leader>pr", builtin.oldfiles, {})
+vim.keymap.set('n', "<leader>r", builtin.oldfiles, {})

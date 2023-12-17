@@ -7,6 +7,7 @@ local nmap = Remap.nmap
 
 --base
 nnoremap("<leader>pv", ":Ex<CR>")
+nnoremap("<C-f>", ":Ex<CR>")
 --nnoremap("<leader>u", ":UndotreeShow<CR>")
 
 vnoremap("J", ":m '>+1<CR>gv=gv")
