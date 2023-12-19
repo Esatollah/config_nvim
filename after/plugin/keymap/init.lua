@@ -48,3 +48,5 @@ nnoremap("<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 -- new
 nnoremap("<leader>U", "<cmd>e!<CR>")
 nnoremap("<C-s>", "<cmd>w<CR>")
+nnoremap("<C-c>", "q:")
+nnoremap("<C-q>", ":q<CR>")
