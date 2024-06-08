@@ -20,6 +20,10 @@ nnoremap("J", "mzJ`z")
 nnoremap("<C-d>", "<C-d>zz")
 nnoremap("<C-u>", "<C-u>zz")
 
+
+nnoremap("<C-b>", ":bprev<CR>")
+nnoremap("<C-n>", ":bnext<CR>")
+
 xnoremap("<leader>p", "\"_dP")
 
 nnoremap("<leader>y", "\"+y")

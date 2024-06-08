@@ -20,6 +20,8 @@ lsp.ensure_installed({
   'tailwindcss',
 })
 
+require'lspconfig'.metals.setup{}
+
 
 -- (Optional) Configure lua language server for neovim
 lsp.nvim_workspace()
