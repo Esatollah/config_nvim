@@ -53,5 +53,13 @@ return require('packer').startup(function(use)
 
   use 'lewis6991/gitsigns.nvim'
   -- autotag for html
+  --
+  use {
+    'numToStr/Comment.nvim',
+    config = function()
+        require('Comment').setup()
+    end
+  }
+  use("petertriho/nvim-scrollbar")
 end
 )
