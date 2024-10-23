@@ -61,5 +61,19 @@ return require('packer').startup(function(use)
     end
   }
   use("petertriho/nvim-scrollbar")
+
+  use("tpope/vim-dadbod")
+  use("kristijanhusak/vim-dadbod-completion")
+  use("kristijanhusak/vim-dadbod-ui")
+
+  use 'mfussenegger/nvim-dap'
+  use 'mfussenegger/nvim-jdtls'
+
+  use 'nvim-tree/nvim-web-devicons' -- OPTIONAL: for file icons
+  use 'romgrk/barbar.nvim'
+
+  use {
+  'nvim-tree/nvim-tree.lua',
+  }
 end
 )

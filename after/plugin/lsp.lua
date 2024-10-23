@@ -1,29 +1,33 @@
-local lsp = require('lsp-zero').preset({
+local lsp_zero = require('lsp-zero')
+local cmp = require('cmp')
+
+local lsp = lsp_zero.preset({
   name = 'minimal',
   set_lsp_keymaps = true,
   manage_nvim_cmp = true,
   suggest_lsp_servers = false,
 })
 
-lsp.on_attach(function(client, bufnr)
-  local opts = {buffer = bufnr}
-  local bind = vim.keymap.set
+lsp.configure('angularls', {
+  root_dir = require('lspconfig').util.root_pattern('angular.json', 'package.json', '.git'),
+})
 
-  bind('n', '<leader>vrr', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
-  -- more keybindings...
-end)
+cmp.setup.filetype({ "sql", "plsql" }, {
+  sources = {
+    { name = "vim-dadbod-completion" },
+    { name = "buffer" },
+  },
+})
 
 lsp.ensure_installed({
-  'tsserver',
   'rust_analyzer',
   'clangd',
   'tailwindcss',
+  'jdtls',
+  'angularls',
+  'ts_ls'
 })
 
-require'lspconfig'.metals.setup{}
-
-
--- (Optional) Configure lua language server for neovim
 lsp.nvim_workspace()
 
 lsp.setup()
