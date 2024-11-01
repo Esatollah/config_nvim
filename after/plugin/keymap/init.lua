@@ -27,7 +27,6 @@ nnoremap("<C-u>", "<C-u>zz")
 
 nnoremap("H", ":BufferPrevious<CR>")
 nnoremap("L", ":BufferNext<CR>")
-nnoremap("A-l", ":BufferMoveNext<CR>")
 
 xnoremap("<leader>p", "\"_dP")
 

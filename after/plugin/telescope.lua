@@ -6,3 +6,7 @@ vim.keymap.set('n', '<leader>ps', function()
 end)
 
 vim.keymap.set('n', "<leader>r", builtin.oldfiles, {})
+
+function Grep(str)
+  builtin.grep_string({ search = str });
+end
