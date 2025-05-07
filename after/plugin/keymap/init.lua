@@ -25,8 +25,10 @@ nnoremap("J", "mzJ`z")
 nnoremap("<C-d>", "<C-d>zz")
 nnoremap("<C-u>", "<C-u>zz")
 
-nnoremap("H", ":BufferPrevious<CR>")
-nnoremap("L", ":BufferNext<CR>")
+nnoremap("<C-h>", ":BufferPrevious<CR>")
+nnoremap("<C-l>", ":BufferNext<CR>")
+nnoremap("<M-h>", ":BufferMovePrevious<CR>")
+nnoremap("<M-l>", ":BufferMoveNext<CR>")
 
 xnoremap("<leader>p", "\"_dP")
 
@@ -50,6 +52,7 @@ nnoremap("<leader>j", "<cmd>lprev<CR>zz")
 nnoremap("<leader>cg", "<cmd>!git db get %<CR>")
 nnoremap("<leader>cp", "<cmd>!git db put %<CR>")
 nnoremap("<leader>cfp", "<cmd>!git db put -f %<CR>")
+nnoremap("<leader>cfg", "<cmd>!git db get -f %<CR>")
 nnoremap("<leader>cs", "<cmd>!git db status %<CR>")
 
 nnoremap("<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")

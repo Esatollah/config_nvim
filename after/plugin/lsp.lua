@@ -8,9 +8,9 @@ local lsp = lsp_zero.preset({
   suggest_lsp_servers = false,
 })
 
-lsp.configure('angularls', {
-  root_dir = require('lspconfig').util.root_pattern('angular.json', 'package.json', '.git'),
-})
+-- lsp.configure('angularls', {
+--   root_dir = require('lspconfig').util.root_pattern('angular.json', 'package.json', '.git'),
+-- })
 
 cmp.setup.filetype({ "sql", "plsql" }, {
   sources = {
@@ -23,7 +23,6 @@ lsp.ensure_installed({
   'rust_analyzer',
   'clangd',
   'tailwindcss',
-  'jdtls',
   'angularls',
   'ts_ls'
 })
