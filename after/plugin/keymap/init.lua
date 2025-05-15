@@ -6,8 +6,9 @@ local xnoremap = Remap.xnoremap
 local nmap = Remap.nmap
 
 nnoremap("<leader>pv", ":Ex<CR>")
-nnoremap("<C-f>", ":NvimTreeToggle<CR>")
-nnoremap("<C-t>", ":NvimTreeFindFile<CR>")
+nnoremap("<C-f>", ":Neotree show<CR>")
+nnoremap("<C-g>", ":Neotree close<CR>")
+nnoremap("<C-t>", ":Neotree reveal<CR>")
 
 nnoremap("<M-left>", ":vertical resize -3<CR>")
 nnoremap("<M-right>", ":vertical resize +3<CR>")

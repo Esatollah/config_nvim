@@ -25,6 +25,19 @@ return require('packer').startup(function(use)
   use{ 'hrsh7th/cmp-path' }     -- Optional
   use{ 'saadparwaiz1/cmp_luasnip' } -- Optional
   use{ 'hrsh7th/cmp-nvim-lua' } -- Optional
+  use { "zbirenbaum/copilot.lua" }
+  use 'MunifTanjim/nui.nvim'
+  use 'stevearc/dressing.nvim'
+  use 'MeanderingProgrammer/render-markdown.nvim'
+
+  use {
+    'yetone/avante.nvim',
+    branch = 'main',
+    run = 'make',
+    config = function()
+      require('avante').setup()
+    end
+  }
 
   use{ 'L3MON4D3/LuaSnip' }         -- Required
   use{ 'rafamadriz/friendly-snippets' }-- Optional
@@ -60,8 +73,9 @@ return require('packer').startup(function(use)
   use 'nvim-tree/nvim-web-devicons' -- OPTIONAL: for file icons
   use 'romgrk/barbar.nvim'
 
-  use {
-  'nvim-tree/nvim-tree.lua',
-  }
+  use({
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+  })
 end
 )
