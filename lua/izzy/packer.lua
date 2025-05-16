@@ -77,5 +77,7 @@ return require('packer').startup(function(use)
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v3.x",
   })
+
+  use 'jpalardy/vim-slime'
 end
 )
