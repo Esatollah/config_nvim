@@ -80,6 +80,9 @@ require('lspconfig')['angularls'].setup {
 require('lspconfig')['lua_ls'].setup {
   capabilities = capabilities
 }
+require('lspconfig')['pyright'].setup {
+  capabilities = capabilities
+}
 
 cmp.setup.filetype({ "sql", "plsql" }, {
   sources = {
@@ -91,4 +94,4 @@ cmp.setup.filetype({ "sql", "plsql" }, {
 vim.lsp.enable('ts_ls')
 vim.lsp.enable('angularls')
 vim.lsp.enable('lua_ls')
-
+vim.lsp.enable('pyright')
