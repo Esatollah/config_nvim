@@ -14,7 +14,12 @@ return require('packer').startup(function(use)
   use { "ellisonleao/gruvbox.nvim" }
 
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
-
+  use {
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- optional
+    },
+  }
   use 'ThePrimeagen/harpoon'
 
   use{ 'neovim/nvim-lspconfig' }         -- Required
@@ -23,6 +28,7 @@ return require('packer').startup(function(use)
   use{ 'hrsh7th/cmp-nvim-lsp' } -- Required
   use{ 'hrsh7th/cmp-buffer' }   -- Optional
   use{ 'hrsh7th/cmp-path' }     -- Optional
+  use{ 'hrsh7th/cmp-vsnip' }     -- Optional
   use{ 'saadparwaiz1/cmp_luasnip' } -- Optional
   use{ 'hrsh7th/cmp-nvim-lua' } -- Optional
   use { "zbirenbaum/copilot.lua" }
@@ -55,7 +61,6 @@ return require('packer').startup(function(use)
 
   use 'lewis6991/gitsigns.nvim'
   -- autotag for html
-  --
   use {
     'numToStr/Comment.nvim',
     config = function()
@@ -72,11 +77,6 @@ return require('packer').startup(function(use)
 
   use 'nvim-tree/nvim-web-devicons' -- OPTIONAL: for file icons
   use 'romgrk/barbar.nvim'
-
-  use({
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
-  })
 
   use 'jpalardy/vim-slime'
 end
