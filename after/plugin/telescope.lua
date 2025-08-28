@@ -5,7 +5,7 @@ vim.keymap.set('n', '<leader>ps', function()
   builtin.grep_string({ search = vim.fn.input("Grep > ") });
 end)
 
-vim.keymap.set('n', "<leader>r", builtin.oldfiles, {})
+vim.keymap.set('n', "<leader>e", builtin.oldfiles, {})
 
 function Grep(str)
   builtin.grep_string({ search = str });
