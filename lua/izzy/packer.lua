@@ -21,8 +21,6 @@ return require('packer').startup(function(use)
     },
   }
 
-  use{ 'neovim/nvim-lspconfig' }         -- Required
-
   use{ 'hrsh7th/nvim-cmp' }     -- Required
   use{ 'hrsh7th/cmp-nvim-lsp' } -- Required
   use{ 'hrsh7th/cmp-buffer' }   -- Optional
