@@ -1,3 +1,3 @@
 require("izzy.remap")
-require('izzy.packer')
+require('izzy.lazy')
 require("izzy.base")
