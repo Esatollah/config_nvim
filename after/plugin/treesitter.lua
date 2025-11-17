@@ -1,4 +1,12 @@
+-- Set parser install directory to a persistent location
+local parser_install_dir = vim.fn.stdpath("data") .. "/treesitter-parsers"
+vim.fn.mkdir(parser_install_dir, "p")
+vim.opt.runtimepath:append(parser_install_dir)
+
 require'nvim-treesitter.configs'.setup {
+  -- Set the parser install directory
+  parser_install_dir = parser_install_dir,
+
   -- A list of parser names, or "all" (the five listed parsers should always be installed)
   ensure_installed = { "c", "cpp", "javascript", "typescript", "lua", "vim", "python", "scala", "sql" },
 

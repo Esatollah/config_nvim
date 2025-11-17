@@ -79,8 +79,26 @@ vim.lsp.config('ts_ls', {
   capabilities = capabilities,
 })
 
+-- Get node_modules paths for Angular LSP
+local function get_node_modules_path()
+  local handle = io.popen("npm root -g 2>/dev/null")
+  if handle then
+    local result = handle:read("*a")
+    handle:close()
+    return vim.trim(result)
+  end
+  return ""
+end
+
+local global_node_modules = get_node_modules_path()
+
 vim.lsp.config('angularls', {
-  cmd = { 'ngserver', '--stdio', '--tsProbeLocations', '', '--ngProbeLocations', '' },
+  cmd = {
+    'ngserver',
+    '--stdio',
+    '--tsProbeLocations', global_node_modules,
+    '--ngProbeLocations', global_node_modules
+  },
   filetypes = { 'typescript', 'html', 'typescriptreact', 'typescript.tsx' },
   root_markers = { 'angular.json', '.git' },
   capabilities = capabilities,
