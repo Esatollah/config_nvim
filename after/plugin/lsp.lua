@@ -70,6 +70,7 @@ cmp.setup.cmdline({ '/', '?' }, {
 
 -- Set up LSP using native Neovim APIs
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
+local lsp_flags = { allow_incremental_sync = false }
 
 -- Configure LSP servers using native vim.lsp.config
 vim.lsp.config('ts_ls', {
@@ -77,6 +78,7 @@ vim.lsp.config('ts_ls', {
   filetypes = { 'javascript', 'javascriptreact', 'javascript.jsx', 'typescript', 'typescriptreact', 'typescript.tsx' },
   root_markers = { 'package.json', 'tsconfig.json', 'jsconfig.json', '.git' },
   capabilities = capabilities,
+  flags = lsp_flags,
 })
 
 -- Get node_modules paths for Angular LSP
@@ -102,6 +104,7 @@ vim.lsp.config('angularls', {
   filetypes = { 'typescript', 'html', 'typescriptreact', 'typescript.tsx' },
   root_markers = { 'angular.json', '.git' },
   capabilities = capabilities,
+  flags = lsp_flags,
 })
 
 vim.lsp.config('lua_ls', {
@@ -109,6 +112,7 @@ vim.lsp.config('lua_ls', {
   filetypes = { 'lua' },
   root_markers = { '.luarc.json', '.luarc.jsonc', '.luacheckrc', '.stylua.toml', 'stylua.toml', 'selene.toml', 'selene.yml', '.git' },
   capabilities = capabilities,
+  flags = lsp_flags,
 })
 
 vim.lsp.config('pyright', {
@@ -116,6 +120,7 @@ vim.lsp.config('pyright', {
   filetypes = { 'python' },
   root_markers = { 'pyproject.toml', 'setup.py', 'setup.cfg', 'requirements.txt', 'Pipfile', 'pyrightconfig.json', '.git' },
   capabilities = capabilities,
+  flags = lsp_flags,
 })
 
 vim.lsp.config('clangd', {
@@ -123,6 +128,7 @@ vim.lsp.config('clangd', {
   filetypes = { 'c', 'cpp', 'objc', 'objcpp', 'cuda', 'proto' },
   root_markers = { '.clangd', '.clang-tidy', '.clang-format', 'compile_commands.json', 'compile_flags.txt', 'configure.ac', '.git' },
   capabilities = capabilities,
+  flags = lsp_flags,
 })
 
 cmp.setup.filetype({ "sql", "plsql" }, {
